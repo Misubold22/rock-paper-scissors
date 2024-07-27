@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="javascript.js" defer></script>
+</head>
+<body>
+    <div class="header">
+        <p class="information-main">Rock, Paper, And Scissors</p>
+    </div>
+
+    <div class="information-container">
+        <div class="information-score">
+            <div class="player-score">0</div>
+            <div style="margin: 0px 30px">-</div>
+            <div class="computer-score">0</div>
+        </div>
+        <div class="score-message">
+            <div class="player-message">Pick Your Choice</div>
+        </div>
+        <div class="d-flex">
+            <div class="information-item">
+                <div class="card">
+                    <div class="information-image" data-image="Rock">
+                        <img src="./images/rock.jpeg" alt="Rock" height="240" width="240" class="hover-effect"/>
+                    </div>
+                    <div class="card-text">Rock</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="information-image" data-image="Paper">
+                    <img src="./images/paper.jpeg" alt="Paper" height="240" width="240" class="hover-effect"/>
+                </div>
+                <div class="card-text">Paper</div>
+            </div>
+            <div class="card">
+                <div class="information-image" data-image="Scissors">
+                    <img src="./images/scissors.jpeg" alt="Scissors" height="240" width="240" class="hover-effect"/>
+                </div>
+                <div class="card-text">Scissors</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="final-result">
+        <div class="game-result"></div>
+    </div>
+</body>
+</html>

@@ -31,3 +31,21 @@ function handleChoice(choice) {
 // Initialize the choice handling
 getHumanChoice(handleChoice);
 
+// Function to randomly select the computer's choice
+function getComputerChoice() {
+    let randomNumber = Math.floor(Math.random() * 3);
+    let computerGuess = '';
+    
+    if (randomNumber === 0) {
+        computerGuess = 'Rock';
+    } else if (randomNumber === 1) {
+        computerGuess = 'Paper';
+    } else {
+        computerGuess = 'Scissors';
+    }
+    
+    return computerGuess;
+}
+
+let computerChoice = getComputerChoice();
+console.log(computerChoice);

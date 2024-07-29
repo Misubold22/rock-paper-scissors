@@ -105,3 +105,27 @@ function playRound(humanChoice, computerChoice) {
         message.textContent = "Tie! No winner declared";
     }
 }
+
+function updatePscore(humanScore) {
+    const scorePlayer = document.querySelector('.player-score');
+    if (scorePlayer) {
+        scorePlayer.textContent = `${humanScore}`;
+    } else {
+        const newScore = document.createElement("div");
+        newScore.classList.add("player-score");
+        newScore.textContent = `${humanScore}`;
+        container.appendChild(newScore);
+    }
+}
+
+function updateCscore(computerScore) {
+    const scoreComputer = document.querySelector('.computer-score');
+    if (scoreComputer) {
+        scoreComputer.textContent = `${computerScore}`;
+    } else {
+        const newScore = document.createElement("div");
+        newScore.classList.add("computer-score");
+        newScore.textContent = `${computerScore}`;
+        container.appendChild(newScore);
+    }
+}

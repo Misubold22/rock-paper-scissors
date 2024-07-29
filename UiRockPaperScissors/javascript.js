@@ -49,3 +49,59 @@ function getComputerChoice() {
 
 let computerChoice = getComputerChoice();
 console.log(computerChoice);
+
+let humanScore = 0;
+updatePscore(humanScore);
+let computerScore = 0;
+updateCscore(computerScore);
+
+function playRound(humanChoice, computerChoice) {
+    if (humanChoice === "Rock" && computerChoice === "Paper") {
+        computerScore++; 
+        updateCscore(computerScore);  
+        const message = document.querySelector('.player-message');
+        message.textContent = "You lose! Paper beats Rock!";
+        
+    } else if (humanChoice === "Rock" && computerChoice === "Scissors") {
+        humanScore++;
+        updatePscore(humanScore);
+        const message = document.querySelector('.player-message');
+        message.textContent = "You Win! Rock beats Scissors!";
+        
+    } else if (humanChoice === "Rock" && computerChoice === "Rock") {
+        const message = document.querySelector('.player-message');
+        message.textContent = "Tie! No winner declared";
+        
+    } else if (humanChoice === "Paper" && computerChoice === "Rock") {
+        humanScore++;
+        updatePscore(humanScore); 
+        const message = document.querySelector('.player-message');
+        message.textContent = "You Win! Paper beats Rock!";
+        
+    } else if (humanChoice === "Paper" && computerChoice === "Paper") {
+        const message = document.querySelector('.player-message');
+        message.textContent = "Tie! No winner declared";
+        
+    } else if (humanChoice === "Paper" && computerChoice === "Scissors") {
+        computerScore++; 
+        updateCscore(computerScore);
+        const message = document.querySelector('.player-message');
+        message.textContent = "You lose! Scissors beats Paper!";
+        
+    } else if (humanChoice === "Scissors" && computerChoice === "Rock") {
+        computerScore++;  
+        updateCscore(computerScore);
+        const message = document.querySelector('.player-message');
+        message.textContent = "You Lose! Rock beats Scissors!";
+        
+    } else if (humanChoice === "Scissors" && computerChoice === "Paper") {
+        humanScore++; 
+        updatePscore(humanScore);  
+        const message = document.querySelector('.player-message');
+        message.textContent = "You Win! Scissors beats Paper!";
+        
+    } else if (humanChoice === "Scissors" && computerChoice === "Scissors") {
+        const message = document.querySelector('.player-message');
+        message.textContent = "Tie! No winner declared";
+    }
+}
